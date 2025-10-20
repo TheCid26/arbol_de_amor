@@ -1,43 +1,43 @@
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background: #fcfcfc;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #fcfcfc;
 }
 
 #fireworks-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    z-index: 1;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
 }
 
 #center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    color: #e60026;
-    font-family: 'Arial Black', Arial, sans-serif;
-    text-shadow: 2px 2px 8px #ffb3b3;
-    z-index: 2;
-    letter-spacing: 0.5rem;
-    user-select: none;
-    display: flex;
-    gap: 0.5rem;
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #e60026;
+  font-family: 'Arial Black', Arial, sans-serif;
+  text-shadow: 2px 2px 8px #ffb3b3;
+  z-index: 2;
+  letter-spacing: 0.5rem;
+  user-select: none;
+  display: flex;
+  gap: 0.5rem;
+  pointer-events: none;
 }
 
 .letter {
-    opacity: 0;
-    transition: opacity 0.5s;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .tree-container {
@@ -63,7 +63,7 @@ body {
 }
 
 .tree-container svg.move-and-scale {
-  transition: transform 1.2s cubic-bezier(.77,0,.18,1);
+  transition: transform 1.2s cubic-bezier(.77, 0, .18, 1);
   transform: translateX(200px) scale(1.35);
 }
 
@@ -76,7 +76,7 @@ body {
   min-width: 320px;
   max-width: 600px;
   width: 60rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #050505;
   font-family: 'Courier New', Courier, monospace;
   white-space: pre-line;
@@ -86,7 +86,7 @@ body {
   max-height: 90vh;
   overflow: visible;
   padding: 1em 1.5em 1em 1em;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 0.7em;
   box-shadow: 0 2px 16px #e6002611;
   /* Permite que la caja crezca en altura y ancho */
@@ -99,14 +99,21 @@ body {
 }
 
 @keyframes fadeInText {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 #floating-objects {
   position: fixed;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
   z-index: 10;
 }
@@ -116,7 +123,8 @@ body {
   will-change: transform, opacity;
   opacity: 0.85;
   pointer-events: none;
-  width: 24px; height: 32px;
+  width: 24px;
+  height: 32px;
   background: radial-gradient(ellipse at 60% 30%, #ffd6e0 60%, #ff69b4 100%);
   border-radius: 60% 40% 60% 40% / 60% 60% 40% 40%;
 }
@@ -131,7 +139,7 @@ body {
   margin-left: 0;
   display: block;
   font-family: 'Dancing Script', 'Pacifico', cursive, sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: #e60026;
   opacity: 0;
   z-index: 5;
@@ -140,14 +148,25 @@ body {
   transition: opacity 0.7s;
 }
 
+.nombre-rojo {
+  color: red;
+  font-weight: bold;
+}
+
+
 .signature.visible {
   opacity: 1;
   animation: signature-draw 2.2s steps(24) forwards;
 }
 
 @keyframes signature-draw {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0 0 0); }
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .countdown {
@@ -167,7 +186,7 @@ body {
   letter-spacing: 0.05em;
   min-width: 220px;
   text-align: center;
-  transition: opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1);
+  transition: opacity 0.8s cubic-bezier(.77, 0, .18, 1), transform 0.8s cubic-bezier(.77, 0, .18, 1);
   opacity: 0;
   transform: translateX(-50%) translateY(30px);
 }
@@ -190,6 +209,7 @@ body {
     font-size: 1.1rem;
     padding: 0.7em 0.7em 0.7em 0.7em;
   }
+
   .signature {
     font-size: 1.3rem;
   }
